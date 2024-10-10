@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="GenerarPassword.MainPage">
+    <ScrollView>
+        
+        <StackLayout BackgroundColor="#292D3E" >
+        <Frame BackgroundColor="#1B1E2B" Padding="18" CornerRadius="0" CascadeInputTransparent="False">
+            <Label Text="Generador de Contraseñas " HorizontalTextAlignment="Center" TextColor="DarkGray" FontSize="24" />
+        </Frame>
+       
+        <Image Source="logito.png" WidthRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+           
+            <Label Text="Número de Caracteres:" FontSize="17" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" TextColor="DarkGray" x:Name="labe2"  HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                <Label Text="" FontSize="17" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                <Entry Placeholder="Tamaño de la contraseña" FontSize="17" Text="35" x:Name="text2" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" PlaceholderColor="DarkSlateGray" TextColor="DarkGray"  FlowDirection="MatchParent" Visual="Material" Keyboard="Numeric"  />
+            </Grid>
+            <Label Text="" FontSize="17" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" TextColor="DarkGray" x:Name="labe6"  HorizontalOptions="Center" VerticalTextAlignment="Center" />
+
+           
+            <!--  <Entry Placeholder="Aqui se muestra la contraseña" Text="" x:Name="text1" TextColor="DarkGray" HorizontalTextAlignment="Center"  FlowDirection="MatchParent" Visual="Material" PlaceholderColor="DarkSlateGray"/>-->
+            <Label Text="" FontSize="17" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+            <ProgressBar ProgressColor="Orange" x:Name="Progreso"/>
+            <Label Text="nn" FontSize="15" Padding="30,0,30,0" TextColor="DarkGray" x:Name="labe7" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+
+            <Label Text="555" FontSize="15" Padding="30,0,30,0" TextColor="DarkGray" x:Name="labe8" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            
+            <Label Text="Password con 35 caracteres, seguridad media recomendada" FontSize="15" Padding="30,0,30,0" TextColor="DarkGray" x:Name="labe3" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+
+        <Frame BackgroundColor="#292D3E" >
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    
+                </Grid.RowDefinitions>
+                <input:CheckBox Text="A-a" x:Name="checkbox1" Color="LightPink" Type="Check" BorderColor="Aqua" Grid.Row="0" Grid.Column="1" TextColor="DarkGray" TextFontSize="14" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand"/>
+                <input:CheckBox Text="1-9" x:Name="checkbox2" Color="LightPink" Type="Check" BorderColor="GreenYellow" Grid.Row="0" Grid.Column="2" TextColor="DarkGray" TextFontSize="14" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand"/>
+                <input:CheckBox Text="$-%" x:Name="checkbox3" Color="LightPink" Type="Check" BorderColor="WhiteSmoke"  Grid.Row="0" Grid.Column="3" TextColor="DarkGray" TextFontSize="14" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" />
+                <input:CheckBox Text="Ascii" x:Name="checkbox4" Color="LightPink" Type="Check" BorderColor="WhiteSmoke"  Grid.Row="0" Grid.Column="4" TextColor="DarkGray" TextFontSize="14" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" />
+
+                </Grid>
+            
+        </Frame>
+        <Frame BackgroundColor="#292D3E">
+           
+            <Grid VerticalOptions="Center"  HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Button Text="Generar" x:Name="btnGenerar" Grid.Row="0" Grid.Column="0" Clicked="btnGenerar_Clicked"  BackgroundColor="Crimson" TextColor="DarkGray" CornerRadius="10" />
+
+                <Button Text="Copiar" x:Name="btnCopiar" Grid.Row="1" Grid.Column="0" Clicked="btnCopiar_Clicked"  BackgroundColor="Crimson" TextColor="DarkGray" CornerRadius="10" />
+                <Label Text="Contraseña en Portapapeles: " Grid.Row="2" Grid.Column="0" FontSize="Subtitle" Padding="30,0,30,0" TextColor="DarkGray" x:Name="labe5" HorizontalTextAlignment="Center"/>
+            </Grid>
+        </Frame>
+        
+        
+           
+           
+        
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Frame BackgroundColor="#292D3E" VerticalOptions="EndAndExpand">
+                <Label Text="Frase del dia" Grid.Row="0" Grid.Column="0"  FontSize="14" Padding="30,0,30,0" TextColor="DarkGray" x:Name="labe4" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+
+            </Frame>
+
+        </Grid>
+
+        <Frame BackgroundColor="#1B1E2B" Padding="15" CornerRadius="0" CascadeInputTransparent="True" VerticalOptions="EndAndExpand">
+            <Label HorizontalOptions="Center"
+       VerticalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Visita el blog de " TextColor="DarkGray" />
+                        <Span Text="VictorM"
+                  TextColor="Crimson"
+                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                          CommandParameter="https://www.vicosite.com/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text=" más ejemplos." TextColor="DarkGray" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </Frame>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
